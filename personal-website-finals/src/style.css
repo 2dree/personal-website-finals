@@ -24,6 +24,21 @@ header img {
   text-align: center;
 }
 
+.my-comment-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.my-comment-list li {
+  margin: 0.5rem 0 !important;
+  padding: 0.5rem 0 !important;
+  text-align: left !important;
+  border-bottom: 1px solid #ccc; /* Optional: a visual separator */
+}
+
+
 /* Ensure there's no horizontal overflow */
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 html, body {

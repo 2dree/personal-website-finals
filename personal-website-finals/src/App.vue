@@ -285,16 +285,4 @@ export default {
 };
 </script>
 
-<style scoped>
-  .my-comment-list {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-  .my-comment-list li {
-    display: block;
-    margin: 0.5rem 0 !important;
-    text-align: left !important;
-  }
-</style>
+
