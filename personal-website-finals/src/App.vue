@@ -198,11 +198,11 @@ app.mount('#app');
       <!-- Display Comments --> 
     <div>
     <h4>Comments:</h4>
-    <ul>
-      <li v-for="comment in comments" :key="comment.id">
-        <strong>{{ comment.name }}</strong>: {{ comment.message }}
-      </li>
-    </ul>
+    <ul class="my-comment-list">
+  <li v-for="comment in comments" :key="comment.id">
+    <strong>{{ comment.name }}</strong>: {{ comment.message }}
+  </li>
+</ul>
     </div>
   </div>
 </div>

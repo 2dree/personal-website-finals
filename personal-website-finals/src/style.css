@@ -35,13 +35,15 @@ html, body {
   line-height: 1.8;
 }
 
-ul {
-  list-style-type: none;
+.my-comment-list {
+  list-style-type: none;  /* Remove bullets */
   padding: 0;
   margin: 0;
+  text-align: left;       /* Align text to the left if needed */
 }
 
-li {
+/* Optional: add spacing between each comment */
+.my-comment-list li {
   margin: 0.5rem 0;
 }
 
