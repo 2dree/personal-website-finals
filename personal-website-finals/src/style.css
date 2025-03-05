@@ -25,14 +25,14 @@ header img {
 }
 
 .my-comment-list {
-  background: pink !important;   /* Debug color for the <ul> */
+  background: rgba(255, 192, 203, 0.021) !important;   /* Debug color for the <ul> */
   list-style: none !important; 
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .my-comment-list li {
-  background: lightgreen !important; /* Debug color for each <li> */
+  background: rgba(144, 238, 144, 0) !important; /* Debug color for each <li> */
   margin: 0 !important;
   padding: 0.5rem !important;
   text-align: left !important;
