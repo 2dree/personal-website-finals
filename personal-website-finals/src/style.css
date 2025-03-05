@@ -26,8 +26,8 @@ header img {
 
 .my-comment-list {
   list-style: none !important;
-  margin: 0 !important;
   padding: 0 !important;
+  margin: 0 !important;
   text-align: left !important;
 }
 
@@ -35,7 +35,11 @@ header img {
   margin: 0.5rem 0 !important;
   padding: 0.5rem 0 !important;
   text-align: left !important;
-  border-bottom: 1px solid #ccc; /* Optional: a visual separator */
+  position: relative;
+}
+
+.my-comment-list li::before {
+  content: none !important;
 }
 
 
