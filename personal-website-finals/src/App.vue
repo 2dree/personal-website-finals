@@ -142,7 +142,7 @@ app.mount('#app');
     </div>
 
     <div class="w3-col m3">
-      <img src="blob:https://www.messenger.com/43e41922-ab32-438d-aff0-0a00bf2759ba" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+      <img src="" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
     </div>
     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div>
