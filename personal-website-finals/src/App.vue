@@ -218,44 +218,54 @@ app.mount('#app');
 </template>
 
 <script>
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from "@supabase/supabase-js";
 
-// Initialize Supabase
-const supabaseUrl = 'https://glvqdlzsvdmvplohpmgq.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsdnFkbHpzdmRtdnBsb2hwbWdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDExNjAxNTYsImV4cCI6MjA1NjczNjE1Nn0.UauGe2SIarphoWwwAHweqDdV13wkK1k1lSgfFSjW0lc';
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(
+  "https://glvqdlzsvdmvplohpmgq.supabase.co", 
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsdnFkbHpzdmRtdnBsb2hwbWdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDExNjAxNTYsImV4cCI6MjA1NjczNjE1Nn0.UauGe2SIarphoWwwAHweqDdV13wkK1k1lSgfFSjW0lc" 
+);
 
 export default {
   data() {
     return {
-      newComment: { name: '', message: '' },
-      comments: []
+      comments: [], // Initialize comments as an empty array
+      newComment: "" // Input field for new comments
     };
   },
   methods: {
-    async submitComment() {
-      const { data, error } = await supabase
-        .from('comments')
-        .insert([this.newComment]);
+    async fetchComments() {
+      try {
+        const { data, error } = await supabase.from("comments").select("*");
 
-      if (error) {
-        console.error('Error submitting comment:', error.message);
-      } else {
-        this.comments.push(data[0]);
-        this.newComment = { name: '', message: '' }; // Reset form
+        if (error) throw error; // Handle Supabase errors
+
+        console.log("Fetched data from Supabase:", data); // Debugging log
+
+        this.comments = Array.isArray(data) ? data : []; // Ensure it's an array
+      } catch (err) {
+        console.error("Error fetching comments:", err.message);
       }
     },
-    async fetchComments() {
-      const { data, error } = await supabase
-        .from('comments')
-        .select('*')
-        .order('id', { ascending: false });
+
+    async submitComment() {
+      if (!this.newComment.trim()) {
+        console.error("Message is required!");
+        return;
+      }
+
+      const { error } = await supabase
+        .from("comments")
+        .insert([{ message: this.newComment }]); // Adjust based on your table schema
 
       if (error) {
-        console.error('Error fetching comments:', error.message);
-      } else {
-        this.comments = data;
+        console.error("Error inserting comment:", error.message);
+        return;
       }
+
+      console.log("Comment added successfully!");
+
+      await this.fetchComments(); // Refresh comments after inserting
+      this.newComment = ""; // Clear input field
     }
   },
   mounted() {
@@ -263,6 +273,7 @@ export default {
   }
 };
 </script>
+
 
 <style>
   /* Add your custom styles here */
