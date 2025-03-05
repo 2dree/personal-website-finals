@@ -1,5 +1,9 @@
 <template>
-  
+
+    <div id="app">
+    <ProfileComponent />
+  </div>
+
   <div>
     <nav class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
   <a href="#home" class="w3-bar-item w3-button w3-wide">
@@ -308,6 +312,15 @@ export default {
   },
   mounted() {
     this.fetchComments(); // Load comments when the component is mounted
+  }
+};
+
+import ProfileComponent from './components/ProfileComponent.vue';
+
+export default {
+  name: 'App',
+  components: {
+    ProfileComponent
   }
 };
 </script>
