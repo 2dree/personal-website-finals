@@ -196,6 +196,7 @@ app.mount('#app');
       </form>
 
       <!-- Display Comments --> 
+    <div>
     <h4>Comments:</h4>
     <ul>
       <li v-for="comment in comments" :key="comment.id">
@@ -205,7 +206,7 @@ app.mount('#app');
     </div>
   </div>
 </div>
-
+</div>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
