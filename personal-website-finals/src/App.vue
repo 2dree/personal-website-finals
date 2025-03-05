@@ -32,22 +32,25 @@ app.mount('#app');
       <h2 class="w3-center">About Me</h2>
       <div class="w3-row w3-center w3-padding-32">
         <div class="w3-col m6 w3-padding">
-          <img src="@/assets/image.png" alt="About Me Image" style="width:100%; border-radius:10px;">
+          <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/467319362_1146429103744083_6208177518650473317_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PLbmxFGCNgIQ7kNvgFXKjBq&_nc_oc=AdhDd_3Pp9Fl_nyVQT0hlZkrzyiHTNIoD_t82HOAe_qofehP9ZTGq9cB8Fi-S8DsL6k&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD1gEpSB03P1clk1x4ykFRMCFmlW6fQ-TWKb-tO1vfT2ZrDA&oe=67EF9CF9" alt="About Me Image" style="width:100%; border-radius:10px;">
         </div>
         <div class="w3-col m6 w3-padding">
-          <p>Welcome to my website. I am passionate about photography, web design, and digital creativity.</p>
-          <p>Here are some of my skills:</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:90%">Photography 90%</div>
-          </div>
-          <br>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:85%">Web Design 85%</div>
-          </div>
-          <br>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:75%">Photoshop 75%</div>
-          </div>
+          <p class="w3-center"><em>I love photography</em></p>
+          <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <div class="w3-container w3-padding-32">
+        <h3 class="w3-center">Here are some of my skills:</h3>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+          <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:90%">Photography 90%</div>
+        </div>
+        <br>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+          <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:85%">Web Design 85%</div>
+        </div>
+        <br>
+        <div class="w3-light-grey w3-round-xlarge w3-small">
+          <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:75%">Photoshop 75%</div>
         </div>
       </div>
     </section>
