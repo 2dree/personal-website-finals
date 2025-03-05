@@ -156,6 +156,13 @@ app.mount('#app');
   </div>
 </div>
 
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
  
 
 <!-- Container (Contact Section) -->
