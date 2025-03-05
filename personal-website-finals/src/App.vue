@@ -20,40 +20,82 @@ app.mount('#app');
     </nav>
 
     <header class="w3-display-container w3-wide" id="home" style="width:100vw; height:100vh; overflow:hidden; position:relative;">
-      <img class="w3-image" src="https://storage.googleapis.com/pod_public/750/215988.jpg" alt="Parallax Image" style="width:100%; height:100vh; object-fit:cover; position:absolute; top:0; left:0;">
-      <div class="w3-display-middle w3-text-white w3-center w3-container">
-        <h1 class="w3-jumbo w3-hide-small"><b>My Personal Website</b></h1>
-        <h2 class="w3-hide-large w3-hide-medium"><b>My Personal Website</b></h2>
-        <p class="w3-large">A creative space to showcase my work</p>
-      </div>
+      <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">PERSONAL</span> WEBSITE</span>
+  </div>
+</div>
+    
     </header>
 
     <section class="w3-container w3-padding-64" id="about">
       <h2 class="w3-center">About Me</h2>
-      <div class="w3-row w3-center w3-padding-32">
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m12 w3-padding">
+          <p class="w3-center"><em>I love photography</em></p>
+          <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
         <div class="w3-col m6 w3-padding">
           <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/467319362_1146429103744083_6208177518650473317_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PLbmxFGCNgIQ7kNvgFXKjBq&_nc_oc=AdhDd_3Pp9Fl_nyVQT0hlZkrzyiHTNIoD_t82HOAe_qofehP9ZTGq9cB8Fi-S8DsL6k&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD1gEpSB03P1clk1x4ykFRMCFmlW6fQ-TWKb-tO1vfT2ZrDA&oe=67EF9CF9" alt="About Me Image" style="width:100%; border-radius:10px;">
         </div>
         <div class="w3-col m6 w3-padding">
-          <p class="w3-center"><em>I love photography</em></p>
-          <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </div>
       <div class="w3-container w3-padding-32">
         <h3 class="w3-center">Here are some of my skills:</h3>
-        <div class="w3-light-grey w3-round-xlarge w3-small">
-          <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:90%">Photography 90%</div>
+        
+       <p style="text-align: left;" p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+          <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+          </div>
+      <br>
+        
+       <p style="text-align: left;" p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+          <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+          </div>
+      <br>
+
+        <p style="text-align: left;" p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+        <div class="w3-light-grey">
+        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
         </div>
-        <br>
-        <div class="w3-light-grey w3-round-xlarge w3-small">
-          <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:85%">Web Design 85%</div>
         </div>
-        <br>
-        <div class="w3-light-grey w3-round-xlarge w3-small">
-          <div class="w3-container w3-dark-grey w3-round-xlarge w3-padding" style="width:75%">Photoshop 75%</div>
-        </div>
-      </div>
     </section>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div>
+</div>
+
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
 
     <section class='w3-container w3-padding-64' id='portfolio'>
       <h2>Portfolio</h2>

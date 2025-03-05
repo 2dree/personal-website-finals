@@ -25,9 +25,37 @@ header img {
 }
 
 /* Ensure there's no horizontal overflow */
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  height: 100%;
+  line-height: 1.8;
 }
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bgimg-1 {
+  background-image: url('https://storage.googleapis.com/pod_public/750/215988.jpg');
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("https://www.iqglassuk.com/storage/images-processed/w-1200_h-630_m-cover_r-forced_s-down__Ferrari%20F40%20Visits%20Sky%20House%20Design%20Centre%20(2).jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
