@@ -195,13 +195,13 @@ app.mount('#app');
         </button>
       </form>
 
-      <!-- Display Comments -->
-      <h4 class="w3-margin-top">Comments:</h4>
-      <ul>
-        <li v-for="comment in comments" :key="comment.id">
-          <strong>{{ comment.name }}</strong>: {{ comment.message }}
-        </li>
-      </ul>
+      <!-- Display Comments --> 
+    <h4>Comments:</h4>
+    <ul>
+      <li v-for="comment in comments" :key="comment.id">
+        <strong>{{ comment.name }}</strong>: {{ comment.message }}
+      </li>
+    </ul>
     </div>
   </div>
 </div>
@@ -285,11 +285,3 @@ export default {
 </script>
 
 
-<style>
-  /* Add your custom styles here */
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-</style>
