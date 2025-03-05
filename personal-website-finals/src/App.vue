@@ -1,20 +1,14 @@
-// 1. Initialize Vue App
-import { createApp } from 'vue';
-import App from './App.vue';
-import './assets/style.css'; // Custom styling
-
-const app = createApp(App);
-app.mount('#app');
-
-// 2. W3.CSS Parallax Template Integration (inside App.vue)
 <template>
+  
   <div>
-    <nav class="w3-top w3-bar w3-white w3-padding w3-card w3-wide">
-      <a href="#home" class="w3-bar-item w3-button w3-wide"><b>LOGO</b></a>
+    <nav class="w3-top w3-bar w3-black w3-padding w3-card w3-wide">
+  <a href="#home" class="w3-bar-item w3-button w3-wide">
+    <img src="https://files.idyllic.app/files/static/3747527" alt="Logo" style="height:40px; width:auto;">
+  </a>
       <div class="w3-left">
         <a href="#home" class="w3-bar-item w3-button w3-hover-opacity">HOME</a>
         <a href="#about" class="w3-bar-item w3-button w3-hover-opacity">ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-hover-opacity">PORTFOLIO</a>
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hover-opacity">GALLERY</a>
         <a href="#contact" class="w3-bar-item w3-button w3-hover-opacity">CONTACT</a>
       </div>
     </nav>
@@ -25,19 +19,18 @@ app.mount('#app');
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">PERSONAL</span> WEBSITE</span>
   </div>
 </div>
-    
     </header>
-
+  
+    
     <section class="w3-container w3-padding-64" id="about">
       <h2 class="w3-center">About Me</h2>
       <div class="w3-row w3-padding-32">
         <div class="w3-col m12 w3-padding">
-          <p class="w3-center"><em>I love photography</em></p>
-          <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="w3-center"><em>Blog</em></p>
+          <p class="w3-justify">
+          Welcome to my website. I'm excited to share this space with you. Feel free to look around, explore the content, and discover new ideas. 
+            This site is a place where creativity meets inspiration—whether you're here to learn, get inspired, or just browse, I hope you enjoy your time. 
+            Thanks for stopping by, and have a great visit!</p>
         </div>
         <div class="w3-col m6 w3-padding">
           <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t1.15752-9/467319362_1146429103744083_6208177518650473317_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PLbmxFGCNgIQ7kNvgFXKjBq&_nc_oc=AdhDd_3Pp9Fl_nyVQT0hlZkrzyiHTNIoD_t82HOAe_qofehP9ZTGq9cB8Fi-S8DsL6k&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&oh=03_Q7cD1gEpSB03P1clk1x4ykFRMCFmlW6fQ-TWKb-tO1vfT2ZrDA&oe=67EF9CF9" 
@@ -45,51 +38,75 @@ app.mount('#app');
           border-radius:10px;">
         </div>
         <div class="w3-col m6 w3-padding">
-          <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="w3-justify">
+          Hi I'm Paolo Andre J Co one thing that you should know about me is I love cars, because ever since I was a kid I was really into racing. 
+            Watching a racer drive is exciting and amusing. 
+            I also love playing soccer because it's fun and keeps me active. 
+            The game teaches me teamwork and determination, and every match is a chance to learn and improve.
+
+          </p>
+            <p class="w3-justify">
+              Down below, you'll find a showcase of my skills in Computer Science and more. 
+              From programming languages to web development and software design, I'm still learning to use the tools and techniques. 
+               Feel free to explore this section and see what I can do!
+            </p>
         </div>
       </div>
-      <div class="w3-container w3-padding-32">
-        <h3 class="w3-center">Here are some of my skills:</h3>
-        
-       <p style="text-align: left;" p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
-          <div class="w3-light-grey">
-          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-          </div>
-      <br>
-        
-       <p style="text-align: left;" p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
-          <div class="w3-light-grey">
-          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-          </div>
-      <br>
+      <h3 class="w3-center">Here are some of my skills:</h3>
 
-        <p style="text-align: left;" p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
-        <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-        </div>
-        </div>
+<!-- Web Programming Progress Bar -->
+<p style="text-align: left;" p class="w3-wide"><i class="fa fa-laptop"></i> Web Programming(HTML, CSS, Vue.js)</p>
+<div class="progress-container">
+  <div class="progress-bar" style="width: 70%;">70%</div>
+</div>
+<br>
+
+<!-- Web Design Progress Bar -->
+<p style="text-align: left;" p class="w3-wide"><i class="fa fa-laptop"></i> Programming (Python, JavaScript)</p>
+<div class="progress-container">
+  <div class="progress-bar" style="width: 70%;">70%</div>
+</div>
+<br>
+
+<!-- Development Tools (VS Code, GitHub, Vercel) Progress Bar -->
+<p style="text-align: left;" p class="w3-wide"><i class="fa fa-laptop"></i> Development Tools (VS Code, GitHub, Vercel)</p>
+<div class="progress-container">
+  <div class="progress-bar" style="width: 80%;">80%</div>
+</div>
+<br>
+
+<!-- JavaScript Progress Bar -->
+<p style="text-align: left;" p class="w3-wide"><i class="fa fa-laptop"></i> Backend (MySQL, Supabase, PostgreSQL, XAMPP)</p>
+<div class="progress-container">
+  <div class="progress-bar" style="width: 70%;">70%</div>
+</div>
+<br>
+
+
+<!-- Photoshop Progress Bar -->
+<p style="text-align: left;"p class="w3-wide"><i class="fa fa-photo"></i> Photoshop</p>
+<div class="progress-container">
+  <div class="progress-bar" style="width: 10%;">10%</div>
+</div>
+
     </section>
 
     <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
+    <span class="w3-xlarge">Graduated in APC</span><br>
+    as a Senior High
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
+    <span class="w3-xlarge">Received Honors</span><br>
+    1st College in APC
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
+    <span class="w3-xlarge">Finished SOCIT BootCamp</span><br>
+    Asia Pacific College
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
+    <span class="w3-xlarge">Currently</span><br>
+     in 2nd Year College
   </div>
 </div>
 
@@ -167,20 +184,23 @@ app.mount('#app');
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
+  <h3 class="w3-center">MY DETAILS</h3>
+  <p class="w3-center"><em>Feel free to contact me!</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e3/48/e5/river-park.jpg?w=1200&h=-1&s=1" class="w3-image w3-round" style="width:100%">
     </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+    <div class="w3-col m8 w3-panel" style="text-align: left;">
+  <div class="w3-large w3-margin-bottom">
+    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Paranaque, Barangay Merville<br>
+    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +63 9193659349<br>
+    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: pjco3@Student.apc.edu.ph<br>
+    <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+  </div>
+</div>
+
+      
 
       <!-- Vue.js Form -->
       <form @submit.prevent="submitComment">
@@ -207,19 +227,26 @@ app.mount('#app');
     </div>
   </div>
 </div>
-</div>
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="#home" class="w3-button w3-light-grey">
+    <i class="fa fa-arrow-up w3-margin-right"></i>To the top
+  </a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/paoloandrei.co/" target="_blank">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.instagram.com/paoloandrej/" target="_blank">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/paolo-co-676a0424b/" target="_blank">
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>
   </div>
 </footer>
+
 
 
 
