@@ -228,7 +228,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default {
   data() {
     return {
-      newComment: { name: '', email: '', message: '' },
+      newComment: { name: '', message: '' },
       comments: []
     };
   },
@@ -242,7 +242,7 @@ export default {
         console.error('Error submitting comment:', error.message);
       } else {
         this.comments.push(data[0]);
-        this.newComment = { name: '', email: '', message: '' }; // Reset form
+        this.newComment = { name: '', message: '' }; // Reset form
       }
     },
     async fetchComments() {
