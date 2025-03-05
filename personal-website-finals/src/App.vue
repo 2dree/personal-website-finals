@@ -236,7 +236,7 @@ export default {
   data() {
     return {
       comments: [], // Initialize comments as an empty array
-      newComment: "" // Input field for new comments
+      newComment: { name: "", message: "" } // Use an object to store both name and message
     };
   },
   methods: {
@@ -248,21 +248,22 @@ export default {
 
         console.log("Fetched data from Supabase:", data); // Debugging log
 
-        this.comments = Array.isArray(data) ? data : []; // Ensure it's an array
+        this.comments = Array.isArray(data) ? data : [];
       } catch (err) {
         console.error("Error fetching comments:", err.message);
       }
     },
 
     async submitComment() {
-      if (!this.newComment.trim()) {
-        console.error("Message is required!");
+      // Ensure both name and message are provided
+      if (!this.newComment.name.trim() || !this.newComment.message.trim()) {
+        console.error("Both Name and Message are required!");
         return;
       }
 
       const { error } = await supabase
         .from("comments")
-        .insert([{ message: this.newComment }]); // Adjust based on your table schema
+        .insert([{ name: this.newComment.name, message: this.newComment.message }]);
 
       if (error) {
         console.error("Error inserting comment:", error.message);
@@ -272,7 +273,9 @@ export default {
       console.log("Comment added successfully!");
 
       await this.fetchComments(); // Refresh comments after inserting
-      this.newComment = ""; // Clear input field
+
+      // Reset the newComment object
+      this.newComment = { name: "", message: "" };
     }
   },
   mounted() {
@@ -280,6 +283,7 @@ export default {
   }
 };
 </script>
+
 
 
 <style>
