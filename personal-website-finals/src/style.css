@@ -25,21 +25,23 @@ header img {
 }
 
 .my-comment-list {
-  list-style: none !important;
-  padding: 0 !important;
+  background: pink !important;   /* Debug color for the <ul> */
+  list-style: none !important; 
   margin: 0 !important;
-  text-align: left !important;
+  padding: 0 !important;
 }
 
 .my-comment-list li {
-  margin: 0.5rem 0 !important;
-  padding: 0.5rem 0 !important;
+  background: lightgreen !important; /* Debug color for each <li> */
+  margin: 0 !important;
+  padding: 0.5rem !important;
   text-align: left !important;
   position: relative;
 }
 
 .my-comment-list li::before {
   content: none !important;
+  background: none !important;
 }
 
 

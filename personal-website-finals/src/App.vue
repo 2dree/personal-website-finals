@@ -203,6 +203,7 @@ app.mount('#app');
     <strong>{{ comment.name }}</strong>: {{ comment.message }}
   </li>
 </ul>
+
     </div>
   </div>
 </div>
