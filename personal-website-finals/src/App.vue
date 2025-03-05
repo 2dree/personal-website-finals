@@ -247,7 +247,7 @@ export default {
       }
     },
 
-    async submitComment() {
+  async submitComment() {
   if (!this.newComment.trim() || !this.newName.trim()) {
     console.error("Name and message are required!");
     return;
