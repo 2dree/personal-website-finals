@@ -229,14 +229,14 @@ import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   "https://glvqdlzsvdmvplohpmgq.supabase.co", 
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsdnFkbHpzdmRtdnBsb2hwbWdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDExNjAxNTYsImV4cCI6MjA1NjczNjE1Nn0.UauGe2SIarphoWwwAHweqDdV13wkK1k1lSgfFSjW0lc" 
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdsdnFkbHpzdmRtdnBsb2hwbWdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDExNjAxNTYsImV4cCI6MjA1NjczNjE1Nn0.UauGe2SIarphoWwwAHweqDdV13wkK1k1lSgfFSjW0lc"
 );
 
 export default {
   data() {
     return {
-      comments: [], // Initialize comments as an empty array
-      newComment: { name: "", message: "" } // Use an object to store both name and message
+      comments: [], // List of comments fetched from Supabase
+      newComment: { name: "", message: "" } // Use an object for the new comment data
     };
   },
   methods: {
@@ -244,10 +244,9 @@ export default {
       try {
         const { data, error } = await supabase.from("comments").select("*");
 
-        if (error) throw error; // Handle Supabase errors
+        if (error) throw error; // Handle any errors
 
-        console.log("Fetched data from Supabase:", data); // Debugging log
-
+        console.log("Fetched data from Supabase:", data);
         this.comments = Array.isArray(data) ? data : [];
       } catch (err) {
         console.error("Error fetching comments:", err.message);
@@ -255,12 +254,13 @@ export default {
     },
 
     async submitComment() {
-      // Ensure both name and message are provided
+      // Validate that both name and message have values
       if (!this.newComment.name.trim() || !this.newComment.message.trim()) {
         console.error("Both Name and Message are required!");
         return;
       }
 
+      // Insert the comment into Supabase
       const { error } = await supabase
         .from("comments")
         .insert([{ name: this.newComment.name, message: this.newComment.message }]);
@@ -272,18 +272,17 @@ export default {
 
       console.log("Comment added successfully!");
 
-      await this.fetchComments(); // Refresh comments after inserting
+      await this.fetchComments(); // Refresh the comments list
 
-      // Reset the newComment object
+      // Reset the newComment object so it's ready for the next input
       this.newComment = { name: "", message: "" };
     }
   },
   mounted() {
-    this.fetchComments(); // Load comments on page load
+    this.fetchComments(); // Load comments when the component is mounted
   }
 };
 </script>
-
 
 
 <style>
