@@ -254,31 +254,26 @@ export default {
       }
     },
 
-  async submitComment() {
-  if (!this.newComment.trim() || !this.newName.trim()) {
-    console.error("Name and message are required!");
-    return;
-  }
+    async submitComment() {
+      if (!this.newComment.trim()) {
+        console.error("Message is required!");
+        return;
+      }
 
-  // Capitalize the first letter of the name
-  this.newName = this.newName.charAt(0).toUpperCase() + this.newName.slice(1);
+      const { error } = await supabase
+        .from("comments")
+        .insert([{ message: this.newComment }]); // Adjust based on your table schema
 
-  const { error } = await supabase
-    .from("comments")
-    .insert([{ name: this.newName, message: this.newComment }]); // Ensure the schema includes "name"
+      if (error) {
+        console.error("Error inserting comment:", error.message);
+        return;
+      }
 
-  if (error) {
-    console.error("Error inserting comment:", error.message);
-    return;
-  }
+      console.log("Comment added successfully!");
 
-  console.log("Comment added successfully!");
-
-  await this.fetchComments(); // Refresh comments
-  this.newName = ""; // Clear input field
-  this.newComment = "";
-}
-
+      await this.fetchComments(); // Refresh comments after inserting
+      this.newComment = ""; // Clear input field
+    }
   },
   mounted() {
     this.fetchComments(); // Load comments on page load
